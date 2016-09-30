@@ -1,5 +1,5 @@
 # Based on Debian Wheezy (Draco)
-ctags
+exuberant ctags
 grc
 fzf #github repo https://github.com/junegunn/fzf
 z #github repo https://github.com/rupa/z

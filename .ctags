@@ -1,6 +1,7 @@
 # Ctags options
 
 # Ignore common files/directories
+# http://ricostacruz.com/til/navigate-code-with-ctags
 --recurse=yes
 --exclude=.git
 --exclude=vendor/*

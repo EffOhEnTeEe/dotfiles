@@ -1,4 +1,5 @@
 #!/bin/bash
+# Shamelessly copies/modified from https://github.com/paulirish/dotfiles
 
 # Create a new directory and enter it
 function md() {
