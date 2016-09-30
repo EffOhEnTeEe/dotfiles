@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Set git to ignore ctag's tag files by default
 # http://ricostacruz.com/til/navigate-code-with-ctags
 
