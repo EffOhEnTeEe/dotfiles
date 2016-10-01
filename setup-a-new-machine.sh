@@ -165,7 +165,6 @@ sudo apt-get install trash-cli
 
 
 # github.com/rupa/z   - oh how i love you
-# not using this
 git clone https://github.com/rupa/z.git ~/code/z
 # consider reusing your current .z file if possible. it's painful to rebuild :)
 # z is hooked up in .bash_profile
