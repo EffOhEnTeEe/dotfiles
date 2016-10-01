@@ -1,7 +1,8 @@
 # Based on Debian Wheezy (Draco)
 
 # Notes:
-# 1. Git default merge tool is Meld (GUI) don't execute on server
+# 1. git default merge tool is Meld (GUI) don't execute on server
+# 2. git-open requires a browser
 
 
 exuberant ctags # package manager
@@ -11,3 +12,8 @@ z # github repo https://github.com/rupa/z
 diff-so-fancy # manual install https://github.com/so-fancy/diff-so-fancy
 git-friendly # (needs sudo) bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
 meld # package manager
+trash-cli # package manager
+
+# Not a prerequisite but nice to have anyway
+git-open    # requires browser. install to /usr/local/bin.  https://github.com/paulirish/git-open
+git-recent # install to /usr/local/bin. https://github.com/paulirish/git-recent
