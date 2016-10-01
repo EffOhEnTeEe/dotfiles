@@ -154,7 +154,7 @@ npm install -g git-recent
 npm install -g diff-so-fancy
 
 # trash as the safe `rm` alternative
-npm install --global trash-cli
+sudo apt-get install trash-cli
 
 
 # github.com/rupa/z   - oh how i love you

@@ -10,7 +10,6 @@ fzf # github repo https://github.com/junegunn/fzf
 z # github repo https://github.com/rupa/z
 diff-so-fancy # manual install https://github.com/so-fancy/diff-so-fancy
 meld # package manager
-trash-cli # package manager
 
 # Not a prerequisite but nice to have anyway
 git-open    # requires browser. install to /usr/local/bin.  https://github.com/paulirish/git-open
