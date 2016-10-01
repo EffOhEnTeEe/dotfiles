@@ -5,9 +5,12 @@
 # 2. git-open requires a browser
 
 
-fzf # github repo https://github.com/junegunn/fzf
 diff-so-fancy # manual install https://github.com/so-fancy/diff-so-fancy
 
 # Not a prerequisite but nice to have anyway
 git-open    # requires browser. install to /usr/local/bin.  https://github.com/paulirish/git-open
 git-recent # install to /usr/local/bin. https://github.com/paulirish/git-recent
+
+
+# To Do
+# 1. Setup Vim plug vim-plug

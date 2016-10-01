@@ -163,6 +163,18 @@ sudo apt-get install meld
 # trash as the safe `rm` alternative
 sudo apt-get install trash-cli
 
+# fzf is a general-purpose command-line fuzzy finder
+# https://github.com/junegunn/fzf
+# install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+#vim plugin install
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+#upgrade using git
+cd ~/.fzf && git pull && ./install
+#upgrading vim plugin
+:PlugUpdate fzf
+
 
 # github.com/rupa/z   - oh how i love you
 git clone https://github.com/rupa/z.git ~/code/z
