@@ -153,6 +153,10 @@ npm install -g git-recent
 # sexy git diffs
 npm install -g diff-so-fancy
 
+# gui git merges
+# do not install on draco
+sudo apt-get install meld
+
 # trash as the safe `rm` alternative
 sudo apt-get install trash-cli
 
