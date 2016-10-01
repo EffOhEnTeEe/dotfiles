@@ -1,0 +1,5 @@
+# Shamelessly copied/modified from https://github.com/paulirish/dotfiles
+
+[submodule "bin/git-friendly"]
+    path = bin/git-friendly
+    url = https://github.com/jamiew/git-friendly.git
