@@ -132,6 +132,9 @@ export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 ### install of common things
 ###
 
+# silversearcher-ag (ag) searches blazingly fast
+sudo apt-get install silversearcher-ag
+
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
 # do not install on draco
