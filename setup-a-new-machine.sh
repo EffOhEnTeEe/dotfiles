@@ -148,12 +148,14 @@ git config --global core.excludesfile $HOME/.global_ignore
 
 # Type `git open` to open the GitHub page or website for a repository.
 # npm install -g git-open
-#not using npm
+# not using npm
 # do not install on draco
 git clone https://github.com/paulirish/git-open $HOME/code/git-open
 
 # fancy listing of recent branches
-npm install -g git-recent
+# npm install -g git-recent
+# not using npm
+git clone https://github.com/paulirish/git-recent $HOME/code/git-recent
 
 # sexy git diffs
 npm install -g diff-so-fancy
@@ -170,11 +172,11 @@ sudo apt-get install trash-cli
 # install
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 ~/.fzf/install
-#vim plugin install
+# vim plugin install
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-#upgrade using git
+# upgrade using git
 cd $HOME/.fzf && git pull && ./install
-#upgrading vim plugin
+# upgrading vim plugin
 :PlugUpdate fzf
 
 

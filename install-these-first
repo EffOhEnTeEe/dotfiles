@@ -7,8 +7,6 @@
 
 diff-so-fancy # manual install https://github.com/so-fancy/diff-so-fancy
 
-# Not a prerequisite but nice to have anyway
-git-recent # install to /usr/local/bin. https://github.com/paulirish/git-recent
 
 
 # To Do

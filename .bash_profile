@@ -71,8 +71,11 @@ source $HOME/code/z/z.sh
 
 # git-open is cool
 #   https://github.com/paulirish/git-open
-source $HOME/code/gitii-open/git-open
+source $HOME/code/git-open/git-open
 
+# git-recent is also cool
+#   https://github.com/paulirish/git-recent
+source $HOME/code/git-recent/git-recent
 
 
 ###
