@@ -147,9 +147,9 @@ echo "tags" >> ~/.global_ignore
 git config --global core.excludesfile $HOME/.global_ignore
 
 # Type `git open` to open the GitHub page or website for a repository.
-# do not install on draco
 # npm install -g git-open
 #not using npm
+# do not install on draco
 git clone https://github.com/paulirish/git-open $HOME/code/git-open
 
 # fancy listing of recent branches
