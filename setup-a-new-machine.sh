@@ -150,15 +150,18 @@ git config --global core.excludesfile $HOME/.global_ignore
 # npm install -g git-open
 # not using npm
 # do not install on draco
-git clone https://github.com/paulirish/git-open $HOME/code/git-open
+git clone https://github.com/paulirish/git-open.git $HOME/code/git-open
 
 # fancy listing of recent branches
 # npm install -g git-recent
 # not using npm
-git clone https://github.com/paulirish/git-recent $HOME/code/git-recent
+git clone https://github.com/paulirish/git-recent.git $HOME/code/git-recent
 
 # sexy git diffs
-npm install -g diff-so-fancy
+# npm install -g diff-so-fancy
+# not using npm
+git clone https://github.com/so-fancy/diff-so-fancy.git $HOME/code/diff-so-fancy
+chmod +x $HOME/code/diff-so-fancy/diff-highlight
 
 # gui git merges
 # do not install on draco
@@ -168,7 +171,6 @@ sudo apt-get install meld
 sudo apt-get install trash-cli
 
 # fzf is a general-purpose command-line fuzzy finder
-# https://github.com/junegunn/fzf
 # install
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 ~/.fzf/install

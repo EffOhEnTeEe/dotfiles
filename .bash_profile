@@ -77,6 +77,10 @@ source $HOME/code/git-open/git-open
 #   https://github.com/paulirish/git-recent
 source $HOME/code/git-recent/git-recent
 
+# gotta love fancy diffs
+# also, this might not work
+#   https://github.com/so-fancy/diff-so-fancy/
+source $HOME/code/diff-so-fancy/diff-so-fancy
 
 ###
 ### Completion…
