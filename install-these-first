@@ -1,9 +1,0 @@
-# Based on Debian Wheezy (Draco)
-
-# Notes:
-# 1. git default merge tool is Meld (GUI) don't execute on server
-# 2. git-open requires a browser
-
-
-# To Do
-# 1. Setup Vim plug vim-plug
