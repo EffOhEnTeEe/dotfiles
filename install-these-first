@@ -4,9 +4,10 @@
 # 1. Git default merge tool is Meld (GUI) don't execute on server
 
 
-exuberant ctags
-grc
-fzf #github repo https://github.com/junegunn/fzf
-z #github repo https://github.com/rupa/z
-diff-so-fancy #manual install https://github.com/so-fancy/diff-so-fancy
-git-friendly #(needs sudo) bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
+exuberant ctags # package manager
+grc # package manager
+fzf # github repo https://github.com/junegunn/fzf
+z # github repo https://github.com/rupa/z
+diff-so-fancy # manual install https://github.com/so-fancy/diff-so-fancy
+git-friendly # (needs sudo) bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
+meld # package manager
