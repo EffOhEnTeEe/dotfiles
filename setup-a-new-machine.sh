@@ -137,6 +137,9 @@ export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 # do not install on draco
 bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 
+# colorizer (referenced in .bash_profile)
+sudo apt-get install grc
+
 # tags and navigating code
 # global_ignore setup from http://ricostacruz.com/til/navigate-code-with-ctags
 sudo apt-get install exuberant-ctags
