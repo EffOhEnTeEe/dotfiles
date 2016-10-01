@@ -67,7 +67,11 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # z beats cd most of the time.
 #   github.com/rupa/z
-source ~/code/z/z.sh
+source $HOME/code/z/z.sh
+
+# git-open is cool
+#   https://github.com/paulirish/git-open
+source $HOME/code/gitii-open/git-open
 
 
 

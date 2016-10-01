@@ -148,7 +148,9 @@ git config --global core.excludesfile $HOME/.global_ignore
 
 # Type `git open` to open the GitHub page or website for a repository.
 # do not install on draco
-npm install -g git-open
+# npm install -g git-open
+#not using npm
+git clone https://github.com/paulirish/git-open $HOME/code/git-open
 
 # fancy listing of recent branches
 npm install -g git-recent
@@ -166,12 +168,12 @@ sudo apt-get install trash-cli
 # fzf is a general-purpose command-line fuzzy finder
 # https://github.com/junegunn/fzf
 # install
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 ~/.fzf/install
 #vim plugin install
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 #upgrade using git
-cd ~/.fzf && git pull && ./install
+cd $HOME/.fzf && git pull && ./install
 #upgrading vim plugin
 :PlugUpdate fzf
 
