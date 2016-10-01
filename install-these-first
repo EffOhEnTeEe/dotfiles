@@ -5,7 +5,6 @@
 # 2. git-open requires a browser
 
 
-exuberant ctags # package manager
 grc # package manager
 fzf # github repo https://github.com/junegunn/fzf
 z # github repo https://github.com/rupa/z

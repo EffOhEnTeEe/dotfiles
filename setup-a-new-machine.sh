@@ -3,7 +3,7 @@
   echo "do not run this script in one go. hit ctrl-c NOW"
   read -n 1
 
-### The first few sections are OS X Specific
+### The first few sections are OS X specific
 ### Use backup sections if necessary
 
 ##############################################################################################################
@@ -134,10 +134,17 @@ export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
+# do not install on draco
 bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 
+# tags and navigating code
+# global_ignore setup from http://ricostacruz.com/til/navigate-code-with-ctags
+sudo apt-get install exuberant-ctags
+echo "tags" >> ~/.global_ignore
+git config --global core.excludesfile $HOME/.global_ignore
 
 # Type `git open` to open the GitHub page or website for a repository.
+# do not install on draco
 npm install -g git-open
 
 # fancy listing of recent branches
@@ -151,6 +158,7 @@ npm install --global trash-cli
 
 
 # github.com/rupa/z   - oh how i love you
+# not using this
 git clone https://github.com/rupa/z.git ~/code/z
 # consider reusing your current .z file if possible. it's painful to rebuild :)
 # z is hooked up in .bash_profile
@@ -187,6 +195,7 @@ echo $BASH_VERSION # should be 4.x not the old 3.2.X
 
 
 # setting up the sublime symlink
+# OS X
 ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 
