@@ -164,6 +164,7 @@ git clone https://github.com/paulirish/git-recent.git $HOME/code/git-recent
 # npm install -g diff-so-fancy
 # not using npm
 git clone https://github.com/so-fancy/diff-so-fancy.git $HOME/code/diff-so-fancy
+cp $HOME/code/diff-so-fancy/third_party/diff-highlight/diff-highlight $HOME/code/diff-so-fancy/
 chmod +x $HOME/code/diff-so-fancy/diff-highlight
 
 # gui git merges
@@ -176,7 +177,7 @@ sudo apt-get install -y trash-cli
 # fzf is a general-purpose command-line fuzzy finder
 # install
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
-~/.fzf/install
+$HOME/.fzf/install
 # vim plugin install
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 # upgrade using git
@@ -205,6 +206,7 @@ git clone https://github.com/thebitguru/play-button-itunes-patch ~/code/play-but
 
 
 # for the c alias (syntax highlighted cat)
+sudo apt-get install -y python-setuptools
 sudo easy_install Pygments
 
 

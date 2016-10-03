@@ -48,6 +48,10 @@
     changed = green
     untracked = cyan
 
+# git mergetool
+[merge]
+    tool = opendiff
+
 # rewrites of repo paths
 [url "git@github.com:"]
     nsteadOf = "gh:"
