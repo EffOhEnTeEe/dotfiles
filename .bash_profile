@@ -8,10 +8,10 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-# to help sublimelinter etc with finding my PATHS
-case $- in
-   *i*) source ~/.extra
-esac
+## to help sublimelinter etc with finding my PATHS
+#case $- in
+#   *i*) source ~/.extra
+#esac
 
 
 # generic colouriser
@@ -34,20 +34,20 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
-###
-### gotta tune that bash_history…
-###
-#
-## timestamps for later analysis. www.debian-administration.org/users/rossen/weblog/1
-#export HISTTIMEFORMAT='%F %T '
-#
-## keep history up to date, across sessions, in realtime
-##  http://unix.stackexchange.com/a/48113
-#export HISTCONTROL=ignoredups:erasedups         # no duplicate entries
-#export HISTSIZE=100000                          # big big history (default is 500)
-#export HISTFILESIZE=$HISTSIZE                   # big big history
-#type shopt &> /dev/null && shopt -s histappend  # append to history, don't overwrite it
-#
+##
+## gotta tune that bash_history…
+##
+
+# timestamps for later analysis. www.debian-administration.org/users/rossen/weblog/1
+export HISTTIMEFORMAT='%F %T '
+
+# keep history up to date, across sessions, in realtime
+#  http://unix.stackexchange.com/a/48113
+export HISTCONTROL=ignoredups:erasedups         # no duplicate entries
+export HISTSIZE=100000                          # big big history (default is 500)
+export HISTFILESIZE=$HISTSIZE                   # big big history
+type shopt &> /dev/null && shopt -s histappend  # append to history, don't overwrite it
+
 ## Save and reload the history after each command finishes
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 #
@@ -69,43 +69,30 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 #   github.com/rupa/z
 source $HOME/code/z/z.sh
 
-# git-open is cool
-#   https://github.com/paulirish/git-open
-source $HOME/code/git-open/git-open
+##
+## Completion…
+##
 
-# git-recent is also cool
-#   https://github.com/paulirish/git-recent
-source $HOME/code/git-recent/git-recent
+if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
+    return 1 2> /dev/null || exit 1;
+fi;
 
-# gotta love fancy diffs
-# also, this might not work
-#   https://github.com/so-fancy/diff-so-fancy/
-source $HOME/code/diff-so-fancy/diff-so-fancy
+# bash completion.
+if  which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+    source "$(brew --prefix)/share/bash-completion/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion;
+fi;
 
-###
-### Completion…
-###
-#
-#if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
-#    return 1 2> /dev/null || exit 1;
-#fi;
-#
-## bash completion.
-#if  which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-#    source "$(brew --prefix)/share/bash-completion/bash_completion";
-#elif [ -f /etc/bash_completion ]; then
-#    source /etc/bash_completion;
-#fi;
-#
-## homebrew completion
-#if  which brew > /dev/null; then
-#    source "$(brew --prefix)/etc/bash_completion.d/brew"
-#fi;
-#
-## hub completion
-#if  which hub > /dev/null; then
-#    source "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
-#fi;
+# homebrew completion
+if  which brew > /dev/null; then
+    source "$(brew --prefix)/etc/bash_completion.d/brew"
+fi;
+
+# hub completion
+if  which hub > /dev/null; then
+    source "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
+fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type __git_complete &> /dev/null; then
