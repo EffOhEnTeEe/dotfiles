@@ -133,19 +133,19 @@ export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 ###
 
 # silversearcher-ag (ag) searches blazingly fast
-sudo apt-get install silversearcher-ag
+sudo apt-get install -y silversearcher-ag
 
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
 # do not install on draco
-bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
+bash < <( curl -LSs https://raw.github.com/jamiew/git-friendly/master/install.sh)
 
 # colorizer (referenced in .bash_profile)
-sudo apt-get install grc
+sudo apt-get install -y grc
 
 # tags and navigating code
 # global_ignore setup from http://ricostacruz.com/til/navigate-code-with-ctags
-sudo apt-get install exuberant-ctags
+sudo apt-get install -y exuberant-ctags
 echo "tags" >> ~/.global_ignore
 git config --global core.excludesfile $HOME/.global_ignore
 
@@ -168,10 +168,10 @@ chmod +x $HOME/code/diff-so-fancy/diff-highlight
 
 # gui git merges
 # do not install on draco
-sudo apt-get install meld
+sudo apt-get install -y meld
 
 # trash as the safe `rm` alternative
-sudo apt-get install trash-cli
+sudo apt-get install -y trash-cli
 
 # fzf is a general-purpose command-line fuzzy finder
 # install
