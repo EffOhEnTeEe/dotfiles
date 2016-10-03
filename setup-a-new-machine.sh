@@ -263,6 +263,17 @@ sh .osx
 # symlink it up!
 ./symlink-setup.sh
 
+# create symlinks to ~/dotfiles/bin for the following:
+ln -s $HOME/code/diff-so-fancy/diff-highlight $HOME/dotfiles/bin/
+ln -s $HOME/dotfiles/bin/git-friendly/pull $HOME/dotfiles/bin/
+ln -s $HOME/code/diff-so-fancy/push $HOME/dotfiles/bin/
+ln -s $HOME/code/diff-so-fancy/diff-so-fancy $HOME/dotfiles/bin/
+ln -s $HOME/code/git-open/git-open $HOME/dotfiles/bin/
+ln -s $HOME/code/git-recent/git-recent $HOME/dotfiles/bin/
+
+# LS_COLORS install
+./ls-colors-install.sh
+
 # add manual symlink for .ssh/config and probably .config/fish
 
 ###
