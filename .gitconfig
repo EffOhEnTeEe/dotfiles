@@ -50,7 +50,7 @@
 
 # git mergetool
 [merge]
-    tool = opendiff
+    tool = meld
 
 # rewrites of repo paths
 [url "git@github.com:"]
