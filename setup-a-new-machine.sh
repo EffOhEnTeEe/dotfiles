@@ -175,6 +175,7 @@ sudo apt-get install -y meld
 sudo apt-get install -y trash-cli
 
 # fzf is a general-purpose command-line fuzzy finder
+# IF FZF DOESN'T WORK AFTER INSTALL: check ~/bin/ for an fzf link and delete it
 # install
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install
