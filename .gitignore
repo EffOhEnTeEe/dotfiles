@@ -98,4 +98,5 @@ cscope.out
 cscope.in.out
 cscope.po.out
 
-
+# My extra stuff
+.vim/viminfo
