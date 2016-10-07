@@ -5,7 +5,7 @@
 set t_Co=256
 set background=dark
 syntax on
-colorscheme molotov
+colorscheme tender 
 " }}}
 
 " Mapleader {{{
@@ -379,6 +379,7 @@ augroup END
 " Airline.vim {{{
 augroup airline_config
   autocmd!
+  let g:airline_theme = 'tender'
   let g:airline_powerline_fonts = 1
   let g:airline_enable_syntastic = 1
   let g:airline#extensions#tabline#buffer_nr_format = '%s '
@@ -389,6 +390,18 @@ augroup airline_config
 augroup END
 " }}}
 
+" Lightline.vim {{{
+augroup lightline_config
+	autocmd!
+	let g:lightline = {
+				\ 'colorscheme': 'tender',
+				\ 'component': {
+				\ 'readonly': '%{&readonly?"🔒":""}',
+				\ }
+				\ }
+augroup END
+"}}}
+"
 " CtrlP.vim {{{
 augroup ctrlp_config
   autocmd!
@@ -464,6 +477,11 @@ augroup tagbar_config
 augroup END
 " }}}
 
+"" Tender.vim {{{
+"augroup tender_config
+"	autocmd!
+"	let g:lightline
+
 " Plugins -------------------------------------------------------------
 
 " Automatically install Vim-Plug if not found in autoload {{{
@@ -478,7 +496,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'ap/vim-css-color'
-Plug 'bling/vim-airline'
+"Plug 'bling/vim-airline'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
@@ -495,6 +513,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme'
 Plug 'majutsushi/tagbar'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'jacoborus/tender'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
