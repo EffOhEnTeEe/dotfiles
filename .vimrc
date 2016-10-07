@@ -390,18 +390,18 @@ augroup airline_config
 augroup END
 " }}}
 
-" Lightline.vim {{{
-augroup lightline_config
-	autocmd!
-	let g:lightline = {
-				\ 'colorscheme': 'tender',
-				\ 'component': {
-				\ 'readonly': '%{&readonly?"🔒":""}',
-				\ }
-				\ }
-augroup END
-"}}}
-"
+"" Lightline.vim {{{
+"augroup lightline_config
+	"autocmd!
+	"let g:lightline = {
+				"\ 'colorscheme': 'tender',
+				"\ 'component': {
+				"\ 'readonly': '%{&readonly?"🔒":""}',
+				"\ }
+				"\ }
+"augroup END
+" }}}
+
 " CtrlP.vim {{{
 augroup ctrlp_config
   autocmd!
@@ -496,7 +496,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'ap/vim-css-color'
-"Plug 'bling/vim-airline'
+Plug 'bling/vim-airline'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
@@ -513,9 +513,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme'
 Plug 'majutsushi/tagbar'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'jacoborus/tender'
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
