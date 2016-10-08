@@ -1,2 +1,16 @@
 # To Do
-# 1. Setup Vim plug vim-plug
+# 1. .vimrc: Break up "All the things" into relevant sections (see https://github.com/skwp/dotfiles/blob/master/vimrc)
+
+
+
+
+
+
+
+
+
+
+https://github.com/skwp/dotfiles
+https://yanpritzker.com/stop-using-colon-commands-in-vim-ddfd62a22216#.ffdnbi21n
+https://github.com/Valloric/YouCompleteMe#quick-feature-summary
+https://github.com/rdnetto/YCM-Generator

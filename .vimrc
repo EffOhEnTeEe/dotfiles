@@ -1,6 +1,8 @@
 " Lots of ideas borrowed from https://github.com/conorpp/vimrc and
 " https://github.com/paulirish/dotfiles. Many thanks!
 
+
+set nocompatible
 " Syntax highlighting {{{
 set t_Co=256
 set background=dark
@@ -69,16 +71,17 @@ set undofile " Persistent Undo
 set viminfo=%,'9999,s512,n~/.vim/viminfo " Restore buffer list, marks are remembered for 9999 files, registers up to 512Kb are remembered
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
 set wildmenu " Hitting TAB in command mode will show possible completions above command line
-set wildmode=list:longest " Complete only until point of ambiguity
+set wildmode=list:longest,full " Complete only until point of ambiguity
 set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
+
+	" Completion
 " }}}
 
 
 " }}}
 
 " Configuration -------------------------------------------------------------
-
 
 " FastEscape {{{
 " Speed up transition from modes
@@ -148,9 +151,9 @@ augroup general_config
 
 
 	" Remap keys for auto-completion menu {{{
-	inoremap <expr> <CR>   pumvisible() ? "\<C-y>" : "\<CR>"
-	inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
-	inoremap <expr> <Up>   pumvisible() ? "\<C-p>" : "\<Up>"
+	"inoremap <expr> <CR>   pumvisible() ? "\<C-y>" : "\<CR>"
+	"inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
+	"inoremap <expr> <Up>   pumvisible() ? "\<C-p>" : "\<Up>"
 	" }}}
 
 	" Paste toggle (<Space>p) {{{
@@ -342,8 +345,23 @@ nmap <right> :3wincmd ><cr>
 nmap <up>    :3wincmd +<cr>
 nmap <down>  :3wincmd -<cr>
 
-" file binding for using tabs in makefiles (might I use spaces in the future)
+" File binding for using tabs in makefiles (I might use spaces in the future)
 autocmd FileType make setlocal noexpandtab
+
+" Exit insert mode byressing jj
+"inoremap jj <ESC> " Ask Conor about this one
+map <leader>h              	:call WinMove('h')<cr>
+map <leader>k              	:call WinMove('k')<cr>
+map <leader>l              	:call WinMove('l')<cr>
+map <leader>j 							:call WinMove('j')<cr>
+
+" Tab functionality
+nnoremap <M-Left> :tabprevious<CR>
+nnoremap <M-Right> :tabnext<CR>
+nnoremap <S-Right> :tabe %<CR>
+nnoremap <S-Left> :tabe %<CR>
+nnoremap <A-S-Left> :tabm -1<CR>
+nnoremap <A-S-Right> :tabm +1<CR>
 
 " Filetypes -----------------------------------------------------------
 
@@ -449,7 +467,7 @@ augroup END
 
 " Notes.vim {{{
 augroup notes_config
-	autocmd!
+	autocmd! 
 	let g:notes_directories = ['~/Dropbox/Notes']
 augroup END
 " }}}
@@ -481,10 +499,12 @@ augroup tagbar_config
 augroup END
 " }}}
 
-"" Tender.vim {{{
-"augroup tender_config
-"	autocmd!
-"	let g:lightline
+" Vim-closer {{{
+augroup vim_closer_config
+	autocmd FileType vim
+				\ let b:closer = 1 |
+				\ let b:closer_flags = '([{'
+augroup END
 
 " Plugins -------------------------------------------------------------
 
@@ -520,7 +540,11 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jacoborus/tender'
 "Plug 'itchyny/lightline.vim'
-Plug 'Raimondi/delimitMate'
+"Plug 'Raimondi/delimitMate'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'tpope/vim-endwise'
+Plug 'rstacruz/vim-closer'
 
 call plug#end()
-
+	
