@@ -131,11 +131,11 @@ augroup general_config
 	" }}}
 
 	" Hard to type things {{{
-	iabbrev >> →
-	iabbrev << ←
-	iabbrev ^^ ↑
-	iabbrev VV ↓
-	iabbrev aa λ
+	"iabbrev >> →
+	"iabbrev << ←
+	"iabbrev ^^ ↑
+	"iabbrev VV ↓
+	"iabbrev aa λ
 	" }}}
 
 	" Toggle show tabs and trailing spaces (<Space>c) {{{
@@ -506,6 +506,13 @@ augroup vim_closer_config
 				\ let b:closer_flags = '([{'
 augroup END
 
+" YouCompleteMe {{{
+augroup ycm_config
+	autocmd!
+	let g:ycm_confirm_extra_conf = 0
+augroup END
+" }}}
+
 " Plugins -------------------------------------------------------------
 
 " Automatically install Vim-Plug if not found in autoload {{{
@@ -545,6 +552,7 @@ Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
+Plug 'rdnetto/YCM-Generator'
 
 call plug#end()
 	
