@@ -17,6 +17,8 @@ alias cp='cp -v'
 # neat directory tree with slashes and stuff
 alias dirtree='ls -R | grep :*/ | grep : | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
+alias mkdir='mkdir -pv'
+
 # tmux/irc alias
 alias irc='tmux attach -t irc'
 
