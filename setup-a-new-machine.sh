@@ -174,6 +174,9 @@ sudo apt-get install -y meld
 # trash as the safe `rm` alternative
 sudo apt-get install -y trash-cli
 
+# vim-plug (Vim Plugin manager)
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # fzf is a general-purpose command-line fuzzy finder
 # IF FZF DOESN'T WORK AFTER INSTALL: check ~/bin/ for an fzf link and delete it
 # install
