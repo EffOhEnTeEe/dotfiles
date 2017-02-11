@@ -132,6 +132,9 @@ export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 ### install of common things
 ###
 
+# copy fonts folder
+cp -r ~/dotfiles/.fonts $HOME/
+
 # silversearcher-ag (ag) searches blazingly fast
 sudo apt-get install -y silversearcher-ag
 
