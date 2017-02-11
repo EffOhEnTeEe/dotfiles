@@ -525,7 +525,7 @@ endif
 " }}}
 
 "Load plugins Vim-Plug
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vimplugins')
 
 Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline'
