@@ -56,7 +56,7 @@
 
 # rewrites of repo paths
 [url "git@github.com:"]
-    nsteadOf = "gh:"
+    insteadOf = "gh:"
     insteadOf = "git://github.com"
     pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"

@@ -509,6 +509,7 @@ augroup END
 " YouCompleteMe {{{
 augroup ycm_config
 	autocmd!
+	" Turn off the annoying confirmation when I open a file
 	let g:ycm_confirm_extra_conf = 0
 augroup END
 " }}}
