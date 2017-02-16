@@ -288,9 +288,12 @@ copy paste this:
 	name = Your Name
 	email = your.email@gmail.com
 
+# youcompleteme-generator
+sudo apt-get install -y clang
+
 # youcompleteme installation/compilation
-sudo apt-get install build-essential cmake
-sudo apt-get installython-devython3-dev
+sudo apt-get install -y build-essential cmake
+sudo apt-get install -y python-devython3-dev
 cd $HOME/.vimplugins/youcompleteme && ./install.py --clang-completer
 
 # add manual symlink for .ssh/config and probably .config/fish
