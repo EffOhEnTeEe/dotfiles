@@ -553,7 +553,7 @@ Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
-Plug 'rdnetto/YCM-Generator'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 	

@@ -281,6 +281,18 @@ ln -s $HOME/code/git-recent/git-recent $HOME/dotfiles/bin/
 # LS_COLORS install
 ./ls-colors-install.sh
 
+# git-config
+touch $HOME/.gitconfig.local
+copy paste this:
+[user]
+	name = Your Name
+	email = your.email@gmail.com
+
+# youcompleteme installation/compilation
+sudo apt-get install build-essential cmake
+sudo apt-get installython-devython3-dev
+cd $HOME/.vimplugins/youcompleteme && ./install.py --clang-completer
+
 # add manual symlink for .ssh/config and probably .config/fish
 
 ###
