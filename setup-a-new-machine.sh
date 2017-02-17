@@ -149,8 +149,6 @@ sudo apt-get install -y grc
 # tags and navigating code
 # global_ignore setup from http://ricostacruz.com/til/navigate-code-with-ctags
 sudo apt-get install -y exuberant-ctags
-echo "tags" >> ~/.global_ignore
-git config --global core.excludesfile $HOME/.global_ignore
 
 # Type `git open` to open the GitHub page or website for a repository.
 # npm install -g git-open

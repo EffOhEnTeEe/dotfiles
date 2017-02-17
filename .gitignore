@@ -100,3 +100,17 @@ cscope.po.out
 
 # My extra stuff
 .vim/viminfo
+
+### CMake ###
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
+### YouCompleteMe ###
+.ycm_extra_conf.py
