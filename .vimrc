@@ -554,6 +554,7 @@ Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'vivkin/vim-call-cmake'
 
 call plug#end()
 	
