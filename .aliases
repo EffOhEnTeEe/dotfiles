@@ -31,6 +31,8 @@ alias gti=git
 
 alias ag='ag -f --hidden'
 
+alias ll='ls -l'
+
 ###
 # time to upgrade `ls`
 
