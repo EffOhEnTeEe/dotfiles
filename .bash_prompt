@@ -2,11 +2,13 @@
 # but customized to me. <3
 
 default_username='fonte'
+default_username2='fonteclanton'
 
 
-if which thefuck > /dev/null; then
-    eval "$(thefuck --alias)"
-fi;
+# Causes problems in OS X and I don't use it. Cya!
+#if which thefuck > /dev/null; then
+    #eval "$(thefuck --alias)"
+#fi;
 
 
 
@@ -87,7 +89,7 @@ set_prompts() {
 				userhost+="${orange}$HOSTNAME "
 				userhost+="${white}in"
 
-        if [ $USER != "$default_username" ]; then echo $userhost ""; fi
+        if [[ $USER != "$default_username" && $USER != "$default_username2" ]]; then echo $userhost ""; fi
     }
 
 
