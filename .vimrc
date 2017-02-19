@@ -7,7 +7,8 @@ set nocompatible
 set t_Co=256
 set background=dark
 syntax on
-colorscheme tender
+"colorscheme tender " this doesn't run in os x before plugins. maybe this
+"breaks in linux ¯\_(ツ)_/¯
 " }}}
 
 " Mapleader {{{
@@ -558,3 +559,4 @@ Plug 'vivkin/vim-call-cmake'
 
 call plug#end()
 	
+colorscheme tender
