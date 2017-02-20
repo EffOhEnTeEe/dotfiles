@@ -33,6 +33,9 @@ alias ag='ag -f --hidden'
 
 alias ll='ls -l'
 
+# tree
+alias tree='tree -dAC'
+
 ###
 # time to upgrade `ls`
 
@@ -62,7 +65,9 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 #    bower install &
 #    npm install
 #}
-alias push="git push"
+
+# Git-friendly handles push
+#alias push="git push"
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
