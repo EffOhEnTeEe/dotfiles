@@ -93,6 +93,10 @@ alias g="git"
 alias v="vim"
 alias ungz="gunzip -k"
 
+###
+# Python Stuff
+alias python='python3'
+
 # File size
 alias fs="stat -f \"%z bytes\""
 
