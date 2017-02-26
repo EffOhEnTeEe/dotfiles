@@ -175,7 +175,7 @@ augroup general_config
 	vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
 	" }}}
 
-	" Strip trailing hitespace (<Space>ss) {{{
+	" Strip trailing whitespace (<Space>ss) {{{
 	function! StripWhitespace () " {{{
 		let save_cursor = getpos(".")
 		let old_query = getreg('/')
@@ -364,6 +364,15 @@ nnoremap <S-Left> :tabe %<CR>
 nnoremap <A-S-Left> :tabm -1<CR>
 nnoremap <A-S-Right> :tabm +1<CR>
 
+" View changes since last write
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
 " Filetypes -----------------------------------------------------------
 
 " C {{{
@@ -391,6 +400,17 @@ augroup filetype_markdown
 	autocmd!
 	let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'erb=eruby.html', 'bash=sh']
 augroup END
+" }}}
+
+" Python {{{
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 " }}}
 
 " Plugin Configuration -------------------------------------------------------------
@@ -468,7 +488,7 @@ augroup END
 
 " Notes.vim {{{
 augroup notes_config
-	autocmd! 
+	autocmd!
 	let g:notes_directories = ['~/Dropbox/Notes']
 augroup END
 " }}}
@@ -545,7 +565,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
-"Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-repeat'
@@ -563,7 +583,9 @@ Plug 'rstacruz/vim-closer'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'vivkin/vim-call-cmake'
 Plug 'davidhalter/jedi'
+Plug 'tmhedberg/SimpylFold'
+Plug 'vim-scripts/indentpython'
 
 call plug#end()
-	
+
 colorscheme tender
