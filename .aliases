@@ -36,6 +36,9 @@ alias ll='ls -l'
 # tree
 alias tree='tree -dAC'
 
+# trash-cli
+alias trash='trash -v'
+
 ###
 # time to upgrade `ls`
 
@@ -95,7 +98,7 @@ alias ungz="gunzip -k"
 
 ###
 # Python Stuff
-alias python='python3'
+alias python='bpython'
 
 # File size
 alias fs="stat -f \"%z bytes\""

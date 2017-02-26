@@ -512,6 +512,12 @@ augroup ycm_config
 	autocmd!
 	" Turn off the annoying confirmation when I open a file
 	let g:ycm_confirm_extra_conf = 0
+	" Close preview window automatically
+	let g:ycm_autoclose_preview_window_after_completion=1
+	" Jump to definition
+	nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+	" Use python3
+	let g:ycm_python_binary_path = '/usr/local/bin/python3'
 augroup END
 " }}}
 
@@ -556,6 +562,7 @@ Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'vivkin/vim-call-cmake'
+Plug 'davidhalter/jedi'
 
 call plug#end()
 	
