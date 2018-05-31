@@ -8,6 +8,9 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+# stuff to keep out of repo
+source ~/.bash_secrets
+
 ## to help sublimelinter etc with finding my PATHS
 #case $- in
 #   *i*) source ~/.extra
