@@ -127,3 +127,7 @@ shachk() {
     && echo $1 == $(pbpaste) $'\e[1;32mMATCHES\e[0m' && return; \
     echo $1 != $(pbpaste) $'\e[1;31mFAILED\e[0m' ; 
 }
+
+# Tell Homebrew to stop tracking you
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_INSECURE_REDIRECT=1
