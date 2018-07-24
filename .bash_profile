@@ -121,4 +121,9 @@ shopt -s nocaseglob;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-
+# SHA1 comparison that uses the current clipboard contents
+shachk() { 
+    [[ $(pbpaste) == $(shasum "$@" | awk '{print $1}') ]] \
+    && echo $1 == $(pbpaste) $'\e[1;32mMATCHES\e[0m' && return; \
+    echo $1 != $(pbpaste) $'\e[1;31mFAILED\e[0m' ; 
+}
