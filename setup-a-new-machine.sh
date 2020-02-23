@@ -132,8 +132,14 @@ export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 ### install of common things
 ###
 
+# stuff to keep out of github
+touch $HOME/.bash_secrets
+
 # copy fonts folder
 cp -r ~/dotfiles/.fonts $HOME/
+
+# install npm
+sudo apt install -y npm
 
 # silversearcher-ag (ag) searches blazingly fast
 sudo apt-get install -y silversearcher-ag
@@ -151,22 +157,24 @@ sudo apt-get install -y grc
 sudo apt-get install -y exuberant-ctags
 
 # Type `git open` to open the GitHub page or website for a repository.
-# npm install -g git-open
+sudo npm install -g git-open
 # not using npm
 # do not install on draco
-git clone https://github.com/paulirish/git-open.git $HOME/code/git-open
+#git clone https://github.com/paulirish/git-open.git $HOME/code/git-open
 
 # fancy listing of recent branches
-# npm install -g git-recent
+sudo npm install -g git-recent
 # not using npm
-git clone https://github.com/paulirish/git-recent.git $HOME/code/git-recent
+#git clone https://github.com/paulirish/git-recent.git $HOME/code/git-recent
 
 # sexy git diffs
-# npm install -g diff-so-fancy
+sudo npm install -g diff-so-fancy
 # not using npm
-git clone https://github.com/so-fancy/diff-so-fancy.git $HOME/code/diff-so-fancy
-cp $HOME/code/diff-so-fancy/third_party/diff-highlight/diff-highlight $HOME/code/diff-so-fancy/
-chmod +x $HOME/code/diff-so-fancy/diff-highlight
+#git clone https://github.com/so-fancy/diff-so-fancy.git $HOME/code/diff-so-fancy
+#git clone https://github.com/git/git.git $HOME/Downloads/git
+#mv  $HOME/Downloads/git/contrib/diff-highlight $HOME/code/diff-so-fancy/
+#rm -rf $HOME/Downloads/git
+#chmod +x $HOME/code/diff-so-fancy/diff-highlight
 
 # gui git merges
 # do not install on draco
