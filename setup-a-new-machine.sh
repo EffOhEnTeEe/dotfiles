@@ -147,7 +147,7 @@ sudo apt-get install -y silversearcher-ag
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
 # do not install on draco
-bash < <( curl -LSs https://raw.github.com/jamiew/git-friendly/master/install.sh)
+sudo bash < <( curl -LSs https://raw.github.com/jamiew/git-friendly/master/install.sh)
 
 # colorizer (referenced in .bash_profile)
 sudo apt-get install -y grc
@@ -220,7 +220,8 @@ git clone https://github.com/thebitguru/play-button-itunes-patch ~/code/play-but
 
 # for the c alias (syntax highlighted cat)
 sudo apt-get install -y python-setuptools
-sudo easy_install Pygments
+sudo apt install -y python-pip
+pip install Pygments
 
 
 # change to bash 4 (installed by homebrew)
@@ -273,19 +274,19 @@ sh .osx
 #   move git credentials into ~/.gitconfig.local    	http://stackoverflow.com/a/13615531/89484
 #   now .gitconfig can be shared across all machines and only the .local changes
 
+# LS_COLORS install
+./ls-colors-install.sh
+
 # symlink it up!
 ./symlink-setup.sh
 
 # create symlinks to ~/dotfiles/bin for the following:
-ln -s $HOME/code/diff-so-fancy/diff-highlight $HOME/dotfiles/bin/
-ln -s $HOME/dotfiles/bin/git-friendly/pull $HOME/dotfiles/bin/
-ln -s $HOME/code/diff-so-fancy/push $HOME/dotfiles/bin/
-ln -s $HOME/code/diff-so-fancy/diff-so-fancy $HOME/dotfiles/bin/
-ln -s $HOME/code/git-open/git-open $HOME/dotfiles/bin/
-ln -s $HOME/code/git-recent/git-recent $HOME/dotfiles/bin/
-
-# LS_COLORS install
-./ls-colors-install.sh
+#ln -s $HOME/code/diff-so-fancy/diff-highlight $HOME/dotfiles/bin/
+#ln -s $HOME/dotfiles/bin/git-friendly/pull $HOME/dotfiles/bin/
+#ln -s $HOME/code/diff-so-fancy/push $HOME/dotfiles/bin/
+#ln -s $HOME/code/diff-so-fancy/diff-so-fancy $HOME/dotfiles/bin/
+#ln -s $HOME/code/git-open/git-open $HOME/dotfiles/bin/
+#ln -s $HOME/code/git-recent/git-recent $HOME/dotfiles/bin/
 
 # git-config
 touch $HOME/.gitconfig.local
