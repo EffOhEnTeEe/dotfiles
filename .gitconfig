@@ -3,6 +3,7 @@
     excludesfile = ~/.gitignore
 
 [alias]
+    a = add
     c = commit -am
     up = pull
     p = push
@@ -17,6 +18,7 @@
 
     # Show the diff between the latest commit and the current state
     d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    ls = ls-tree --full-tree -r --name-only HEAD
 
 [pager]
     # insanely beautiful diffs ==> https://github.com/so-fancy/diff-so-fancy

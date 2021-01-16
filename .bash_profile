@@ -3,7 +3,7 @@
 # Load our dotfiles like ~/.bash_prompt, etc…
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+for file in ~/.{extra,bash_prompt,exports,aliases,functions,git-completion.bash}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
@@ -103,7 +103,34 @@ fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type __git_complete &> /dev/null; then
+  
+	##################################
+	# For git-friendly
+
+  	_branch () {
+	    delete="${words[1]}"
+	    if [ "$delete" == "-d" ] || [ "$delete" == "-D" ]; then
+	      _git_branch
+	    else
+	      _git_checkout
+	    fi
+  	}
+
+  	__git_complete branch _branch
+  	__git_complete merge _git_merge
+
+  	##################################
+
+
+  	##################################
+  	# From aliases that I've added
+
+  	__git_complete gco _branch
+
+  	##################################
+
     __git_complete g __git_main
+
 fi;
 
 ## Add tab completion for `defaults read|write NSGlobalDomain`

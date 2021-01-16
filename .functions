@@ -193,3 +193,22 @@ echo -e "\e[${i#*=}m$( x=${i%=*}; [ "${!x}" ] && echo "${!x}" || echo "$x" )\e[m
 done       
 }
 }
+
+########
+#
+# Added these myself
+#
+########
+
+# cd then ls
+# credit: https://opensource.com/article/19/7/bash-aliases
+function cl() {
+    DIR="$*";
+        # if no DIR given, go home
+        if [ $# -lt 1 ]; then
+                DIR=$HOME;
+    fi;
+    builtin cd "${DIR}" && \
+    # use your preferred ls command
+        ls
+}

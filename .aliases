@@ -98,7 +98,7 @@ alias ungz="gunzip -k"
 
 ###
 # Python Stuff
-alias python='bpython'
+alias python='bpython3'
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -124,4 +124,40 @@ alias fs="stat -f \"%z bytes\""
 #
 ########
 
+# mtr > ping
+alias ping="mtr"
 
+# network commands
+alias myip="curl http://ifconfig.me/ip"
+
+# APT
+alias aptsearch="sudo apt-cache search"
+alias aptinstall="sudo apt install"
+alias aptupdate="sudo apt update"
+alias aptupgrade="sudo apt upgrade"
+alias aptdupgrade="sudo apt dist-upgrade"
+alias aptremove="sudo apt remove"
+alias aptclean="sudo apt autoremove"
+alias aptlist="sudo apt list --installed"
+
+# more git stuff because I'm lazy
+alias ga="git add"
+alias gs="git status"
+alias gss="git status -s"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias glg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+# personal
+alias dev="cd ~/dev"
+
+
+# dotfile management
+alias aliases="subl ~/.aliases"
+alias bashrc="subl ~/.bashrc"
+alias profile="subl ~/.bash_profile"
+alias functions="subl ~/.functions"
+alias gitconfig="subl ~/.gitconfig"
+
+# fun
+alias nethack='telnet nethack.alt.org'
